@@ -1,0 +1,123 @@
+Program:
+
+void main()
+{
+    int num1, num2, gcd, lcm, remainder, numerator, denominator;
+    printf("Enter two numbers\n");
+    scanf("%d %d", &num1, &num2);
+    if (num1 > num2)
+    {
+        numerator = num1;
+        denominator = num2;
+    }
+    else
+    {
+        numerator = num2;
+        denominator = num1;
+    }
+    remainder = numerator % denominator;
+    while (remainder != 0)
+    {
+        numerator   = denominator;
+        denominator = remainder;
+        remainder   = numerator % denominator;
+    }
+    gcd = denominator;
+    lcm = num1 * num2 / gcd;
+    printf("GCD of %d and %d = %d\n", num1, num2, gcd);
+    printf("LCM of %d and %d = %d\n", num1, num2, lcm);
+}
+
+Output:
+
+Line 1:
+        keywords:  void
+        identifiers/variables:  main
+        Operators:  ()
+Line 2:
+        delimiters: {
+Line 3:
+        delimiters: , , , , , , ;
+        keywords:  int
+        identifiers/variables:  num1 num2 gcd lcm remainder numerator denominator
+Line 4:
+        delimiters: "" ;
+        identifiers/variables:  printf
+        Operators:  ()
+Line 5:
+        delimiters: "" , , ;
+        identifiers/variables:  scanf num1 num2
+        Operators:  () & &
+Line 6:
+        keywords:  if
+        identifiers/variables:  num1 num2
+        Operators:  () >
+Line 7:
+        delimiters: {
+Line 8:
+        delimiters: ;
+        identifiers/variables:  numerator num1
+        Operators:  =
+Line 9:
+        delimiters: ;
+        identifiers/variables:  denominator num2
+        Operators:  =
+Line 10:
+        delimiters: }
+Line 11:
+Line 12:
+        delimiters: {
+        keywords:  else
+Line 13:
+        delimiters: ;
+        identifiers/variables:  numerator num2
+        Operators:  =
+Line 14:
+        delimiters: ;
+        identifiers/variables:  denominator num1
+        Operators:  =
+Line 15:
+        delimiters: }
+Line 16:
+        delimiters: ;
+        identifiers/variables:  remainder numerator denominator
+        Operators:  = %
+Line 17:
+        keywords:  while
+        identifiers/variables:  remainder
+        constants:  0
+        Operators:  () !=
+Line 18:
+        delimiters: {
+Line 19:
+        delimiters: ;
+        identifiers/variables:  numerator denominator
+        Operators:  =
+Line 20:
+        delimiters: ;
+        identifiers/variables:  denominator remainder
+        Operators:  =
+Line 21:
+        delimiters: ;
+        identifiers/variables:  remainder numerator denominator
+        Operators:  = %
+Line 22:
+        delimiters: }
+Line 23:
+        delimiters: ;
+        identifiers/variables:  gcd denominator
+        Operators:  =
+Line 24:
+        delimiters: ;
+        identifiers/variables:  lcm num1 num2 gcd
+        Operators:  = * /
+Line 25:
+        delimiters: "" , , , ;
+        identifiers/variables:  printf num1 num2 gcd
+        Operators:  ()
+Line 26:
+        delimiters: "" , , , ;
+        identifiers/variables:  printf num1 num2 lcm
+        Operators:  ()
+Line 27:
+        delimiters: }
